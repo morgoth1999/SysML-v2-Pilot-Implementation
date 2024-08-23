@@ -26,6 +26,7 @@
 package org.omg.sysml.util.traversal.facade.impl;
 
 import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 import org.omg.sysml.ApiClient;
@@ -76,6 +77,7 @@ public class ApiElementProcessingFacade extends JsonElementProcessingFacade {
 				build());
 		
 		this.project.setName(projectName);
+		this.project.setAtId(UUID.fromString(this.project.getName()));
 	}
 	
 	/**
