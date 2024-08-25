@@ -77,7 +77,8 @@ public class ApiElementProcessingFacade extends JsonElementProcessingFacade {
 				build());
 		
 		this.project.setName(projectName);
-		this.project.setAtId(UUID.fromString(this.project.getName()));
+		UUID uuid = UUID.randomUUID();
+		this.project.setAtId(uuid);
 	}
 	
 	/**
